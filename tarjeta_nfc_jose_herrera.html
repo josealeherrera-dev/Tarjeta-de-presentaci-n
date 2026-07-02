@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>José Alejandro Herrera Gill | Tarjeta NFC</title>
+  <meta name="description" content="Tarjeta digital NFC de José Alejandro Herrera Gill" />
+  <style>
+    :root {
+      --green-dark: #003c34;
+      --green: #0b8f45;
+      --green-light: #22b455;
+      --soft: #f4f8f6;
+      --text: #11332d;
+      --muted: #5a6b67;
+      --white: #ffffff;
+      --border: #dfe9e5;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(140deg, var(--green-dark), #052b26 55%, #0a6d3d);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 22px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 430px;
+      background: var(--white);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.28);
+      position: relative;
+    }
+
+    .top {
+      background: radial-gradient(circle at top right, #0d7b44, var(--green-dark));
+      color: var(--white);
+      padding: 34px 26px 42px;
+      text-align: center;
+      position: relative;
+    }
+
+    .nfc {
+      width: 74px;
+      height: 74px;
+      border: 3px solid rgba(255,255,255,0.75);
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    .tagline {
+      margin: 0;
+      color: #b8e5ca;
+      font-size: 14px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 32px 24px 26px;
+      text-align: center;
+      background: linear-gradient(180deg, #ffffff, #f8fbfa);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.08;
+      color: var(--green-dark);
+    }
+
+    .role {
+      margin-top: 14px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .institution {
+      margin: 7px 0 18px;
+      color: var(--muted);
+      line-height: 1.4;
+      font-size: 15.5px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: #eaf4ef;
+      color: var(--green-dark);
+      font-size: 14px;
+      margin-bottom: 18px;
+      border: 1px solid var(--border);
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      text-decoration: none;
+      border-radius: 18px;
+      padding: 17px 18px;
+      font-weight: 800;
+      font-size: 18px;
+      margin: 12px 0;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .whatsapp {
+      background: linear-gradient(135deg, var(--green-light), var(--green));
+      color: var(--white);
+      box-shadow: 0 8px 20px rgba(13,143,69,0.35);
+    }
+
+    .secondary {
+      background: var(--white);
+      color: var(--green-dark);
+      border: 1px solid var(--border);
+      font-size: 16px;
+      justify-content: flex-start;
+    }
+
+    .secondary span.icon {
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      border-radius: 50%;
+      background: #e8f3ee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+    }
+
+    .secondary .text {
+      text-align: left;
+      line-height: 1.25;
+    }
+
+    .secondary small {
+      display: block;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
+      word-break: break-word;
+    }
+
+    .areas {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .area {
+      background: #f1f7f4;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 13px 8px;
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .footer {
+      padding: 18px 22px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      background: #f8fbfa;
+    }
+
+    .leaf {
+      font-size: 20px;
+      color: var(--green);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <section class="top">
+      <div class="nfc">NFC</div>
+      <p class="tagline">Tarjeta digital</p>
+    </section>
+
+    <section class="content">
+      <h1>José Alejandro<br>Herrera Gill</h1>
+      <div class="role">Ingeniero Agrónomo</div>
+      <p class="institution">
+        Dirección de Sanidad Vegetal<br>
+        MAGA · VISAR · ONPF Guatemala
+      </p>
+      <div class="badge">🌿 Comprometido con la protección de los recursos vegetales</div>
+
+      <a class="button whatsapp" href="https://wa.me/50251001594?text=Hola%20Jos%C3%A9.%20Acabo%20de%20escanear%20tu%20tarjeta%20NFC%20y%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20contigo." target="_blank" rel="noopener">
+        💬 Escríbeme por WhatsApp
+      </a>
+
+      <a class="button secondary" href="tel:+50251001594">
+        <span class="icon">📞</span>
+        <span class="text">Llamar<small>+502 5100-1594</small></span>
+      </a>
+
+      <a class="button secondary" href="mailto:jose.herrera@maga.gob.gt">
+        <span class="icon">✉️</span>
+        <span class="text">Correo electrónico<small>jose.herrera@maga.gob.gt</small></span>
+      </a>
+
+      <a class="button secondary" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AHerrera%20Gill%3BJos%C3%A9%20Alejandro%3B%3B%3B%0AFN%3AJos%C3%A9%20Alejandro%20Herrera%20Gill%0AORG%3ADirecci%C3%B3n%20de%20Sanidad%20Vegetal%20-%20MAGA%0ATITLE%3AIngeniero%20Agr%C3%B3nomo%0ATEL%3BTYPE%3DCELL%3A%2B50251001594%0AEMAIL%3Ajose.herrera%40maga.gob.gt%0AEND%3AVCARD" download="Jose_Alejandro_Herrera_Gill.vcf">
+        <span class="icon">👤</span>
+        <span class="text">Guardar contacto<small>Agregar a contactos del teléfono</small></span>
+      </a>
+
+      <a class="button secondary" href="https://sanidadvegetal.maga.gob.gt" target="_blank" rel="noopener">
+        <span class="icon">🌐</span>
+        <span class="text">Sitio web<small>sanidadvegetal.maga.gob.gt</small></span>
+      </a>
+
+      <div class="areas">
+        <div class="area">Vigilancia Epidemiológica</div>
+        <div class="area">Análisis de Riesgo</div>
+        <div class="area">Protección Vegetal</div>
+        <div class="area">Cooperación Regional</div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <span class="leaf">❦</span><br>
+      Trabajamos hoy por una agricultura sana y sostenible.
+    </section>
+  </main>
+</body>
+</html>
